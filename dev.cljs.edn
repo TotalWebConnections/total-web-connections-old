@@ -1,0 +1,6 @@
+^{:watch-dirs ["test" "src"]
+  :css-dirs ["resources/public/css"]
+  :auto-testing true
+  :auto-bundle :webpack}
+^{:ring-handler total-web-connections.server/handler}
+{:main total-web-connections.core}

@@ -1,0 +1,11 @@
+$max-width:  1230px;
+$max-width-small: 680px;
+$standard-padding: 15px;
+
+@import '_reset';
+@import '_colors';
+@import '_typography';
+
+html {
+  font-size: 16px;
+}
