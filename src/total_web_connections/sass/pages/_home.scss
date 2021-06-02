@@ -1,0 +1,31 @@
+.Home {
+  &__hero {
+    position: relative;
+
+    &__text {
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      text-align: center;
+      color: white;
+      max-width: $max-width-small;
+      padding: 0 $standard-padding;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+
+  &__about {
+    text-align: center;
+    border-bottom: 1px solid $red;
+
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -51,28 +51,63 @@ p {
 h1, h2, h3, h4, h5 {
   font-family: 'Lato', sans-serif; }
 
-h1 {
+h1, .text-h1 {
   font-size: 3.25rem; }
 
-h2 {
+h2, .text-h2 {
   font-size: 2.827em; }
 
-h3 {
-  font-size: 1.999em; }
+h3, .text-h3 {
+  font-size: 2.45em;
+  font-weight: 300; }
 
-h4 {
-  font-size: 1.414em; }
+h4, .text-h4 {
+  font-size: 1.4em;
+  font-weight: 300; }
+
+.red-text {
+  color: #cd5871; }
+
+.blue-underline {
+  border-bottom: 1px solid #36a0cd;
+  padding-bottom: 8px;
+  display: inline-block; }
+
+.Home__hero {
+  position: relative; }
+  .Home__hero__text {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    max-width: 680px;
+    padding: 0 15px; }
+    .Home__hero__text__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+
+.Home__about {
+  text-align: center;
+  border-bottom: 1px solid #cd5871; }
+  .Home__about h2 {
+    margin-bottom: 25px; }
 
 html {
   font-size: 16px; }
-
-.section {
-  padding: 124px 0; }
 
 .maxWidth {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 15px; }
+
+.section {
+  padding: 124px 0; }
 
 .maxWidthText {
   max-width: 680px;
