@@ -21,24 +21,24 @@
 (defn get-app-element []
   (gdom/getElement "app"))
 
-(defn scroll-to-top []
-  "required or a link might put us halfway down a page - called on every route"
-  (.scrollTo js/window 0 0))
-
-(defn seo-header-setup [post]
-  (seo/set-seo-title post)
-  (seo/set-meta-desc post)
-  (seo/set-published-date post))
-
-(defn handle-post-page [view match post]
-  (seo-header-setup post)
-  (scroll-to-top)
-  [view match post])
-
-(defn handle-static-page [view match]
-  (seo-header-setup nil)
-  (scroll-to-top)
-  [view match])
+; (defn scroll-to-top []
+;   "required or a link might put us halfway down a page - called on every route"
+;   (.scrollTo js/window 0 0))
+;
+; (defn seo-header-setup [post]
+;   (seo/set-seo-title post)
+;   (seo/set-meta-desc post)
+;   (seo/set-published-date post))
+;
+; (defn handle-post-page [view match post]
+;   (seo-header-setup post)
+;   (scroll-to-top)
+;   [view match post])
+;
+; (defn handle-static-page [view match]
+;   (seo-header-setup nil)
+;   (scroll-to-top)
+;   [view match])
 
 (defn base-page []
   (let [view (:view (:data @match))
@@ -47,9 +47,11 @@
         ; {:keys [uri]} path
         ; post (get-post-by-id uri)]
     (if post
-      (handle-post-page view @match post)
+      [view match post]
+      ; (handle-post-page view @match post)
       (if view
-        (handle-static-page view @match)
+        ; (handle-static-page view @match)
+        [view match post]
         [Home-page])))) ; TODO 404 here
 
 (def routes
